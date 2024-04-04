@@ -3,8 +3,8 @@ let deletebtns = document.querySelectorAll(".deleteButton")
 deletebtns.forEach(btn => {
 
     btn.addEventListener("click", function (e) {
-        let url=btn.getAttribute("href")
         e.preventDefault();
+        let url=btn.getAttribute("href")
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",

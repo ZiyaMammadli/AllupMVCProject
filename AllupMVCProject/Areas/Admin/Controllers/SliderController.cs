@@ -32,6 +32,11 @@ namespace AllupMVCProject.Areas.Admin.Controllers
             {
                await _sliderService.CreateAsync(slider);
             }
+            catch (RequiredPropertyException ex)
+            {
+                ModelState.AddModelError(ex._PropertyName, ex.Message);
+                return View();
+            }
             catch (InvalidContentTypeException ex)
             {
                 ModelState.AddModelError(ex._PropertyName, ex.Message);
@@ -96,14 +101,14 @@ namespace AllupMVCProject.Areas.Admin.Controllers
             catch (NotFoundException ex)
             {
                 ModelState.AddModelError("", ex.Message);
-                return View();
+                return NotFound();
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError("", ex.Message);
-                return View();
+                return NotFound();
             }
-            return RedirectToAction("index");
+            return Ok();
         }
     }
 }

@@ -18,6 +18,11 @@ public class SliderService : ISliderService
     }
     public async Task CreateAsync(Slider slider)
     {
+        if (slider.ImageFile is null)
+        {
+            throw new RequiredPropertyException("ImageFile", "This area is required!");
+        }
+
         if (slider.ImageFile.ContentType != "image/jpeg" && slider.ImageFile.ContentType != "image/png")
         {
             throw new InvalidContentTypeException("ImageFile", "Please,You enter jpeg or png file");
@@ -66,7 +71,7 @@ public class SliderService : ISliderService
         }
 
         _context.Sliders.Remove(slider);   
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
 
     }
 
@@ -140,6 +145,7 @@ public class SliderService : ISliderService
         currentSlider.UpdatedDate = DateTime.UtcNow.AddHours(4);
         currentSlider.Title = slider.Title;  
         currentSlider.Desc = slider.Desc;
+        currentSlider.IsActivated= slider.IsActivated;
         await _context.SaveChangesAsync();
     }
     private IQueryable<Slider> _GetIncludes(IQueryable<Slider> query,params string[]includes)

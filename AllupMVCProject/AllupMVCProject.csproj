@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\Uploads\Categories\" />
+    <Folder Include="wwwroot\Uploads\Brands\" />
     <Folder Include="wwwroot\Uploads\Sliders\" />
   </ItemGroup>
 

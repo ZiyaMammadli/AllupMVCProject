@@ -14,6 +14,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
+                    <th scope="col">Activate</th>
                     <th scope="col">ImageUrl</th>
                     <th scope="col">Actions</th>
                 </tr>
@@ -26,13 +27,14 @@
                         <th scope="row">@counter</th>
                         <td>@slider.Title</td>
                         <td>@slider.Desc</td>
+                        <td>@slider.IsActivated</td>
                         <td>
                             <img style="width:150px" src="~/uploads/Sliders/@slider.ImageUrl" alt="Alternate Text" />
                         </td>
                         <td>
                             <div style="display:flex;">
                                 <a style="margin-right:10px;color:white" class="btn btn-warning" asp-controller="slider" asp-action="update" asp-route-id="@slider.Id">Update</a>
-                                <a style="color:white" class="btn btn-danger" asp-controller="slider" asp-action="delete" asp-route-id="@slider.Id">Delete</a>
+                                <a style="color:white" class="btn btn-danger deleteButton" asp-controller="slider" asp-action="delete" asp-route-id="@slider.Id">Delete</a>
                             </div>
                         </td>
                     </tr>

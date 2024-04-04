@@ -1,0 +1,44 @@
+﻿@model List<Brand>;
+@{
+    int counter = 0;
+}
+<div class="container">
+    <div class="row">
+        <div style="display:flex;justify-content:space-between;align-items:center;align-content:center;margin-top:20px;border:1px solid grey;padding:10px">
+            <h3 style="margin-bottom:0">Brands</h3>
+            <a class="btn-success" style="padding:10px;align-items:center;border-radius:10px" asp-controller="brand" asp-action="create">Create</a>
+        </div>
+        <table class="table table-striped" style="margin-top:40px;border:1px solid grey">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Activate</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var brand in Model)
+                {
+                    counter++;
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@brand.Name</td>
+                        <td>@brand.IsActivated</td>
+                        <td>
+                            <img style="width:150px" src="~/uploads/Brands/@brand.LogoUrl" alt="Alternate Text" />
+                        </td>
+                        <td>
+                            <div style="display:flex;">
+                                <a style="margin-right:10px;color:white" class="btn btn-warning" asp-controller="brand" asp-action="update" asp-route-id="@brand.Id">Update</a>
+                                <a style="color:white" class="btn btn-danger deleteButton" asp-controller="brand" asp-action="delete" asp-route-id="@brand.Id">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
