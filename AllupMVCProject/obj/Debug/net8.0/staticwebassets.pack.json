@@ -5,16 +5,40 @@
       "PackagePath": "staticwebassets\\AllupMVCProject.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Brands\\d40ac08e-e4f0-4ee1-876b-399970660ee4banner-5.jpg",
-      "PackagePath": "staticwebassets\\Uploads\\Brands\\d40ac08e-e4f0-4ee1-876b-399970660ee4banner-5.jpg"
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Brands\\ace57a00-d656-48bd-8e16-8351a0e4d569banner-12.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Brands\\ace57a00-d656-48bd-8e16-8351a0e4d569banner-12.jpg"
     },
     {
-      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Categories\\825b482d-1086-4877-9aaa-8c05ecda85bccategory-8.jpg",
-      "PackagePath": "staticwebassets\\Uploads\\Categories\\825b482d-1086-4877-9aaa-8c05ecda85bccategory-8.jpg"
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Brands\\d6608415-ef5b-4d00-a368-74ff4b098e68banner-10.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Brands\\d6608415-ef5b-4d00-a368-74ff4b098e68banner-10.jpg"
     },
     {
-      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Sliders\\bc442755-7d18-471f-b8f2-0c0000658894banner-2.png",
-      "PackagePath": "staticwebassets\\Uploads\\Sliders\\bc442755-7d18-471f-b8f2-0c0000658894banner-2.png"
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Categories\\1a061f66-c38d-4e7b-a67c-d26e0df8563acategory-1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Categories\\1a061f66-c38d-4e7b-a67c-d26e0df8563acategory-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Categories\\920ffcf3-6671-4025-afc7-c42cb478bd6fblog-2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Categories\\920ffcf3-6671-4025-afc7-c42cb478bd6fblog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Products\\086013a2-f343-497f-ad50-4b519fdafcb8category-12.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\086013a2-f343-497f-ad50-4b519fdafcb8category-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Products\\5c14c2c6-19a9-4fab-8f78-040e0e724db5category-10.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\5c14c2c6-19a9-4fab-8f78-040e0e724db5category-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Products\\8071aff3-0523-4b7c-8ee7-f146a7e503f9category-11.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\8071aff3-0523-4b7c-8ee7-f146a7e503f9category-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Products\\8c1e84b2-7b0c-46b1-ac30-774da0754312blog-1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\8c1e84b2-7b0c-46b1-ac30-774da0754312blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Products\\a289de5c-319f-48c1-9233-a97f5c3f79bfbanner-12.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\a289de5c-319f-48c1-9233-a97f5c3f79bfbanner-12.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\admin\\assets\\css\\demo.css",

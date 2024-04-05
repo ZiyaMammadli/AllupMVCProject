@@ -7,7 +7,7 @@
     <form style="margin-top:20px" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input asp-for="Name" class="form-control" aria-describedby="emailHelp">
+            <input asp-for="Name" class="form-control" aria-describedby="emailHelp">                
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
@@ -58,8 +58,8 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Selections</label>
-            <select asp-for="CategoyId" asp-items="@(new SelectList(categories,"Id","Name"))" class="form-select" style="width:200px"></select>
-            <span asp-validation-for="CategoyId" class="text-danger"></span>
+            <select asp-for="CategoryId" asp-items="@(new SelectList(categories,"Id","Name"))" class="form-select" style="width:200px"></select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
             <select asp-for="BrandId" asp-items="@(new SelectList(brands,"Id","Name"))" class="form-select" style="width:200px"></select>
         </div>
         <div class="mb-3">

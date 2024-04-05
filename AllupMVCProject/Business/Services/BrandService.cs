@@ -131,7 +131,7 @@ namespace AllupMVCProject.Business.Services
         public async Task<List<Brand>> GetAllAsync(Expression<Func<Brand, bool>>? expression = null, params string[] includes)
         {
             var query = _context.Brands.AsQueryable();
-            _GetIncludes(query, includes);
+            query = _GetIncludes(query, includes);
             return expression is not null
                 ? await query.Where(expression).ToListAsync()
                 : await query.ToListAsync();
@@ -146,7 +146,7 @@ namespace AllupMVCProject.Business.Services
         public async Task<Brand> GetSingleAsync(Expression<Func<Brand, bool>>? expression = null, params string[] includes)
         {
             var query = _context.Brands.AsQueryable();
-            _GetIncludes(query, includes);
+            query = _GetIncludes(query, includes);
             return expression is not null
                 ? await query.Where(expression).FirstOrDefaultAsync()
                 : await query.FirstOrDefaultAsync();

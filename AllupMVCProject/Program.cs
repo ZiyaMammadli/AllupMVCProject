@@ -13,7 +13,7 @@ builder.Services.AddScoped<IBrandService,BrandService>();
 builder.Services.AddScoped<IProductService,ProductService>();
 builder.Services.AddDbContext<AllupDbContext>(opt =>
 {
-	opt.UseSqlServer("Server=WIN-PRIFU0D7GO7\\SQLEXPRESS;Database=AllupDb;Trusted_Connection=true;TrustServerCertificate=True");
+	opt.UseSqlServer("Server=WIN-PRIFU0D7GO7\\SQLEXPRESS;Database=AllupDBContext;Trusted_Connection=true;TrustServerCertificate=True");
 });
 
 var app = builder.Build();

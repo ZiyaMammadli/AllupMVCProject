@@ -132,7 +132,7 @@ namespace AllupMVCProject.Business.Services
         public async Task<List<Category>> GetAllAsync(Expression<Func<Category, bool>>? expression = null, params string[] includes)
         {
             var query=_context.Categories.AsQueryable();
-            _GetIncludes(query, includes);
+            query = _GetIncludes(query, includes);
             return expression is not null
                 ? await query.Where(expression).ToListAsync()
                 : await query.ToListAsync();
@@ -147,7 +147,7 @@ namespace AllupMVCProject.Business.Services
         public async Task<Category> GetSingleAsync(Expression<Func<Category, bool>>? expression = null, params string[] includes)
         {
             var query = _context.Categories.AsQueryable();
-            _GetIncludes(query, includes);
+            query = _GetIncludes(query, includes);
             return expression is not null
                 ? await query.Where(expression).FirstOrDefaultAsync()
                 : await query.FirstOrDefaultAsync();

@@ -19,7 +19,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await _productService.GetAllAsync(null,"Category","Brand"));
+            return View(await _productService.GetAllAsync(null,"Category","Brand","ProductImages"));
         }
         [HttpGet]
         public async Task<IActionResult> Create() 
@@ -31,12 +31,19 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Product product) 
-        { 
-            if(!ModelState.IsValid) return View();
+        {
+            ViewData["category"] = await _categoryService.GetAllAsync();
+            ViewData["brand"] = await _brandService.GetAllAsync();
+            if (!ModelState.IsValid) return View();
 
             try
             {
                 await _productService.CreateAsync(product);
+            }
+            catch(RequiredPropertyException ex)
+            {
+                ModelState.AddModelError(ex._PropertyName, ex.Message);
+                return View();
             }
             catch(InvalidContentTypeException ex)
             {

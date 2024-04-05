@@ -8,8 +8,6 @@ namespace AllupMVCProject.Models;
 
 public class Product:BaseEntity
 {
-    public int BrandId { get; set; }
-    public int CategoyId { get; set; }
     [Required]
     [StringLength (50)]
     public string Name { get; set; }
@@ -35,7 +33,9 @@ public class Product:BaseEntity
     [NotMapped]
     public ICollection<IFormFile>? ImageFiles { get; set; }
     public ICollection<ProductImage>? ProductImages { get; set; }
+    public int CategoryId { get; set; }
     public Category? Category { get; set; }
+    public int BrandId { get; set; }
     public Brand? Brand { get; set; }
 
 }

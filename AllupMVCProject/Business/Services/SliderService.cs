@@ -78,7 +78,7 @@ public class SliderService : ISliderService
     public async Task<List<Slider>> GetAllAsync(Expression<Func<Slider, bool>>? expression = null, params string[] includes)
     {
         var query=_context.Sliders.AsQueryable();
-        _GetIncludes(query, includes);
+        query = _GetIncludes(query, includes);
         return expression is not null 
             ? await query.Where(expression).ToListAsync()
             : await query.ToListAsync();
@@ -93,7 +93,7 @@ public class SliderService : ISliderService
     public async Task<Slider> GetSingleAsync(Expression<Func<Slider, bool>>? expression = null, params string[] includes)
     {
         var query = _context.Sliders.AsQueryable();
-        _GetIncludes(query, includes);
+        query = _GetIncludes(query, includes);
         return expression is not null
             ? await query.Where(expression).FirstOrDefaultAsync()
             : await query.FirstOrDefaultAsync();
