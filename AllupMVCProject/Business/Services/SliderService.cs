@@ -146,6 +146,7 @@ public class SliderService : ISliderService
         currentSlider.Title = slider.Title;  
         currentSlider.Desc = slider.Desc;
         currentSlider.IsActivated= slider.IsActivated;
+        currentSlider.RedirectUrl = slider.RedirectUrl;
         await _context.SaveChangesAsync();
     }
     private IQueryable<Slider> _GetIncludes(IQueryable<Slider> query,params string[]includes)

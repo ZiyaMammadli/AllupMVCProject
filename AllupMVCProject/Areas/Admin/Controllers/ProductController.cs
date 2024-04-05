@@ -65,17 +65,82 @@ namespace AllupMVCProject.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public async Task <IActionResult> Update()
+        public async Task <IActionResult> Update(int id)
         {
-            return View();
+            ViewData["category"] = await _categoryService.GetAllAsync();
+            ViewData["brand"] = await _brandService.GetAllAsync();
+            Product? product = null;
+            try
+            {
+                product = await _productService.GetSingleAsync(b => b.Id == id, "Category", "Brand", "ProductImages");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return View(product);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(Product product)
         {
+            ViewData["category"] = await _categoryService.GetAllAsync();
+            ViewData["brand"] = await _brandService.GetAllAsync();
 
+            if (!ModelState.IsValid) return View();
+            try
+            {
+                await _productService.UpdateAsync(product);
+            }
+            catch (NotFoundException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
+            catch (AlreadyExistException ex)
+            {
+                ModelState.AddModelError(ex._PropertyName, ex.Message);
+                return View();
+            }
+            catch (InvalidContentTypeException ex)
+            {
+                ModelState.AddModelError(ex._PropertyName, ex.Message);
+                return View();
+            }
+            catch (SizeOfFileException ex)
+            {
+                ModelState.AddModelError(ex._PropertName, ex.Message);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
 
             return RedirectToAction("index");
+
+        }
+        [HttpGet]
+        public async Task <IActionResult> Delete(int id)
+        {
+            try
+            {
+               await _productService.DeleteAsync(id);
+
+            }
+            catch(NotFoundException ex)
+            {
+                ModelState.AddModelError("",ex.Message);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return NotFound();
+            }
+            return Ok();
         }
 
     }

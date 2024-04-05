@@ -7,7 +7,7 @@
     <form style="margin-top:20px" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input asp-for="Name" class="form-control" aria-describedby="emailHelp">                
+            <input asp-for="Name" class="form-control" aria-describedby="emailHelp">
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
@@ -55,7 +55,7 @@
             <label for="exampleInputEmail1" class="form-label">IsFeatured</label>
             <input asp-for="IsFeatured" class="form-Check" aria-describedby="emailHelp">
             <span asp-validation-for="IsFeatured" class="text-danger"></span>
-        </div> 
+        </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Activate</label>
             <input asp-for="IsActivated" class="form-Check" aria-describedby="emailHelp">
@@ -72,16 +72,32 @@
             <input asp-for="CoverImageFile" class="form-control" aria-describedby="emailHelp">
             <span asp-validation-for="CoverImageFile" class="text-danger"></span>
         </div>
+        <div>
+            <img style="width:200px" src="~/Uploads/Products/@Model.ProductImages.Where(bi=>bi.IsCover==true).FirstOrDefault()?.ImageUrl" />
+        </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">HoverImageFile</label>
             <input asp-for="HoverImageFile" class="form-control" aria-describedby="emailHelp">
             <span asp-validation-for="HoverImageFile" class="text-danger"></span>
+        </div>
+        <div>
+            <img style="width:200px" src="~/Uploads/Products/@Model.ProductImages.FirstOrDefault(bi=>bi.IsCover==false)?.ImageUrl" />
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">ImageFiles</label>
             <input asp-for="ImageFiles" class="form-control" aria-describedby="emailHelp">
             <span asp-validation-for="ImageFiles" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <div class="row">
+            @foreach (var bi in Model.ProductImages.Where(bi => bi.IsCover == null))
+            {
+                <div class="col-md-2">
+                    <img style="width:200px" src="~/Uploads/Products/@bi?.ImageUrl" />
+                    <input asp-for="ProductImageIds" value="@bi?.Id" />
+                </div>
+            }
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>

@@ -31,8 +31,9 @@ public class Product:BaseEntity
     [NotMapped]
     public IFormFile? CoverImageFile { get; set; }
     [NotMapped]
-    public ICollection<IFormFile>? ImageFiles { get; set; }
-    public ICollection<ProductImage>? ProductImages { get; set; }
+    public List<IFormFile>? ImageFiles { get; set; }
+    public List<ProductImage>? ProductImages { get; set; }
+    public List<int>? ProductImageIds { get; set; }
     public int CategoryId { get; set; }
     public Category? Category { get; set; }
     public int BrandId { get; set; }

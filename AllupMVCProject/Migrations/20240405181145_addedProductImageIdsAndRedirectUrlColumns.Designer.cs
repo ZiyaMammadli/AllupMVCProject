@@ -4,6 +4,7 @@ using AllupMVCProject.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AllupMVCProject.Migrations
 {
     [DbContext(typeof(AllupDbContext))]
-    partial class AllupDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240405181145_addedProductImageIdsAndRedirectUrlColumns")]
+    partial class addedProductImageIdsAndRedirectUrlColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +53,7 @@ namespace AllupMVCProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("AllupMVCProject.Models.Category", b =>
@@ -81,7 +84,7 @@ namespace AllupMVCProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("AllupMVCProject.Models.Product", b =>
@@ -152,7 +155,7 @@ namespace AllupMVCProject.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("AllupMVCProject.Models.ProductImage", b =>
@@ -186,7 +189,7 @@ namespace AllupMVCProject.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages", (string)null);
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("AllupMVCProject.Models.Slider", b =>
@@ -226,7 +229,7 @@ namespace AllupMVCProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders", (string)null);
+                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("AllupMVCProject.Models.Product", b =>

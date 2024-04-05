@@ -14,6 +14,7 @@ public class Slider:BaseEntity
 	[Required]
 	[StringLength(250)]
 	public string Desc { get; set; }
+	public string RedirectUrl { get; set; }
 	[StringLength(250)]
 	public string? ImageUrl { get; set; }
 	[NotMapped]

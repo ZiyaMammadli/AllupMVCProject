@@ -143,189 +143,234 @@ public class ProductService : IProductService
         await _context.SaveChangesAsync();
     }
 
-    public Task UpdateAsync(Product product)
+    public async Task UpdateAsync(Product product)
     {
-        //product CurrentProduct = await _context.Books.FirstOrDefaultAsync(b => b.Id == book.Id);
-        //if (CurrentBook == null) throw new NotFoundException("This book is not found!");
-        //if ((await _context.Books.FirstOrDefaultAsync(b => b.Name == book.Name) is not null) && (book.Name != CurrentBook.Name))
-        //{
-        //    throw new NameAlreadyExistException("name", "This Name is already exist!");
-        //}
-        //if (book.CoverImageFile is not null)
-        //{
-        //    if (book.CoverImageFile.ContentType != "image/jpeg" && book.CoverImageFile.ContentType != "image/png")
-        //    {
-        //        throw new InvalidContentTypeException("CoverImageFile", "Please,You enter jpeg or png file");
-        //    }
-        //    if (book.CoverImageFile.Length > 2097152)
-        //    {
-        //        throw new SizeOfFileException("CoverImageFile", "Please,You just can send low size file from 2 mb!");
-        //    }
-        //    string fileName = book.CoverImageFile.FileName;
-        //    if (fileName.Length > 64)
-        //    {
-        //        fileName = fileName.Substring(fileName.Length - 64, 64);
-        //    }
-        //    fileName = Guid.NewGuid().ToString() + fileName;
+        Product CurrentProduct = await _context.Products.FirstOrDefaultAsync(b => b.Id == product.Id);
+        if (CurrentProduct == null) throw new NotFoundException("This product is not found!");
+        if ((await _context.Products.FirstOrDefaultAsync(b => b.Name == product.Name) is not null) && (product.Name != CurrentProduct.Name))
+        {
+            throw new AlreadyExistException("name", "This Name is already exist!");
+        }
+        if (product.CoverImageFile is not null)
+        {
+            if (product.CoverImageFile.ContentType != "image/jpeg" && product.CoverImageFile.ContentType != "image/png")
+            {
+                throw new InvalidContentTypeException("CoverImageFile", "Please,You enter jpeg or png file");
+            }
+            if (product.CoverImageFile.Length > 2097152)
+            {
+                throw new SizeOfFileException("CoverImageFile", "Please,You just can send low size file from 2 mb!");
+            }
+            string fileName = product.CoverImageFile.FileName;
+            if (fileName.Length > 64)
+            {
+                fileName = fileName.Substring(fileName.Length - 64, 64);
+            }
+            fileName = Guid.NewGuid().ToString() + fileName;
 
 
-        //    string path = Path.Combine(_env.WebRootPath, "uploads/Books", fileName);
+            string path = Path.Combine(_env.WebRootPath, "Uploads/Products", fileName);
 
-        //    using (FileStream fileStream = new FileStream(path, FileMode.Create))
-        //    {
-        //        book.CoverImageFile.CopyTo(fileStream);
-        //    }
+            using (FileStream fileStream = new FileStream(path, FileMode.Create))
+            {
+                product.CoverImageFile.CopyTo(fileStream);
+            }
 
-        //    BookImage? coverImage = await _context.BookImages.Where(bi => bi.IsCover == true).Where(bi => bi.BookId == CurrentBook.Id).FirstOrDefaultAsync();
+            ProductImage? coverImage = await _context.ProductImages.Where(bi => bi.IsCover == true).Where(bi => bi.ProductId == CurrentProduct.Id).FirstOrDefaultAsync();
 
-        //    if (coverImage is not null)
-        //    {
-        //        string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", coverImage.ImageUrl);
-        //        if (File.Exists(path2))
-        //        {
-        //            File.Delete(path2);
-        //        }
-        //        _context.BookImages.Remove(coverImage);
+            if (coverImage is not null)
+            {
+                string path2 = Path.Combine(_env.WebRootPath, "Uploads/Products", coverImage.ImageUrl);
+                if (File.Exists(path2))
+                {
+                    File.Delete(path2);
+                }
+                _context.ProductImages.Remove(coverImage);
 
-        //    }
-        //    BookImage bookImage = new BookImage()
-        //    {
-        //        Book = book,
-        //        ImageUrl = fileName,
-        //        IsCover = true,
-        //        IsActivated = true,
-        //        CreatedDate = DateTime.UtcNow.AddHours(4),
-        //    };
-        //    await _context.BookImages.AddAsync(bookImage);
-        //}
-        //if (book.HoverImageFile is not null)
-        //{
-        //    if (book.HoverImageFile.ContentType != "image/jpeg" && book.HoverImageFile.ContentType != "image/png")
-        //    {
-        //        throw new InvalidContentTypeException("CoverImageFile", "Please,You enter jpeg or png file");
-        //    }
-        //    if (book.HoverImageFile.Length > 2097152)
-        //    {
-        //        throw new SizeOfFileException("CoverImageFile", "Please,You just can send low size file from 2 mb!");
-        //    }
-        //    string fileName = book.HoverImageFile.FileName;
-        //    if (fileName.Length > 64)
-        //    {
-        //        fileName = fileName.Substring(fileName.Length - 64, 64);
-        //    }
-        //    fileName = Guid.NewGuid().ToString() + fileName;
+            }
+            ProductImage productImage = new ProductImage()
+            {
+                Product = product,
+                ImageUrl = fileName,
+                IsCover = true,
+                IsActivated = true,
+                CreatedDate = DateTime.UtcNow.AddHours(4),
+            };
+            await _context.ProductImages.AddAsync(productImage);
+        }
+        if (product.HoverImageFile is not null)
+        {
+            if (product.HoverImageFile.ContentType != "image/jpeg" && product.HoverImageFile.ContentType != "image/png")
+            {
+                throw new InvalidContentTypeException("CoverImageFile", "Please,You enter jpeg or png file");
+            }
+            if (product.HoverImageFile.Length > 2097152)
+            {
+                throw new SizeOfFileException("CoverImageFile", "Please,You just can send low size file from 2 mb!");
+            }
+            string fileName = product.HoverImageFile.FileName;
+            if (fileName.Length > 64)
+            {
+                fileName = fileName.Substring(fileName.Length - 64, 64);
+            }
+            fileName = Guid.NewGuid().ToString() + fileName;
 
-        //    string path = Path.Combine(_env.WebRootPath, "uploads/Books", fileName);
+            string path = Path.Combine(_env.WebRootPath, "Uploads/Products", fileName);
 
-        //    using (FileStream fileStream = new FileStream(path, FileMode.Create))
-        //    {
-        //        book.HoverImageFile.CopyTo(fileStream);
-        //    }
+            using (FileStream fileStream = new FileStream(path, FileMode.Create))
+            {
+                product.HoverImageFile.CopyTo(fileStream);
+            }
 
-        //    BookImage? hoverImage = await _context.BookImages.Where(bi => bi.IsCover == false).Where(bi => bi.BookId == CurrentBook.Id).FirstOrDefaultAsync();
-        //    if (hoverImage is not null)
-        //    {
-        //        string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", hoverImage.ImageUrl);
-        //        if (File.Exists(path2))
-        //        {
-        //            File.Delete(path2);
-        //        }
-        //        _context.BookImages.Remove(hoverImage);
-        //    }
+            ProductImage? hoverImage = await _context.ProductImages.Where(bi => bi.IsCover == false).Where(bi => bi.ProductId == CurrentProduct.Id).FirstOrDefaultAsync();
+            if (hoverImage is not null)
+            {
+                string path2 = Path.Combine(_env.WebRootPath, "Uploads/Products", hoverImage.ImageUrl);
+                if (File.Exists(path2))
+                {
+                    File.Delete(path2);
+                }
+                _context.ProductImages.Remove(hoverImage);
+            }
 
-        //    BookImage bookImage = new BookImage()
-        //    {
-        //        Book = book,
-        //        ImageUrl = fileName,
-        //        IsCover = false,
-        //        IsActivated = true,
-        //        CreatedDate = DateTime.UtcNow.AddHours(4),
-        //    };
+            ProductImage productImage = new ProductImage()
+            {
+                Product = product,
+                ImageUrl = fileName,
+                IsCover = false,
+                IsActivated = true,
+                CreatedDate = DateTime.UtcNow.AddHours(4),
+            };
 
-        //    await _context.BookImages.AddAsync(bookImage);
-        //    }
+            await _context.ProductImages.AddAsync(productImage);
+        }
 
-        //    foreach (var ImageFile in CurrentBook.BookImages.Where(bi => !book.BookImageIds.Contains(bi.Id) && bi.IsCover == null))
-        //    {
-        //        string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", ImageFile.ImageUrl);
-        //        if (File.Exists(path2))
-        //        {
-        //            File.Delete(path2);
-        //        }
-        //    }
+        foreach (var ImageFile in CurrentProduct.ProductImages.Where(bi => !product.ProductImageIds.Contains(bi.Id) && bi.IsCover == null))
+        {
+            string path2 = Path.Combine(_env.WebRootPath, "Uploads/Products", ImageFile.ImageUrl);
+            if (File.Exists(path2))
+            {
+                File.Delete(path2);
+            }
+        }
 
-        //    CurrentBook.BookImages.RemoveAll(bi => !book.BookImageIds.Contains(bi.Id) && bi.IsCover == null);
+        CurrentProduct.ProductImages.RemoveAll(bi => !product.ProductImageIds.Contains(bi.Id) && bi.IsCover == null);
 
-        //    if (book.ImageFiles is not null)
-        //    {
-        //        foreach (var ImageFile in book.ImageFiles)
-        //        {
-        //            if (ImageFile.ContentType != "image/jpeg" && ImageFile.ContentType != "image/png")
-        //            {
-        //                throw new InvalidContentTypeException("ImageFile", "Please,You enter jpeg or png file");
-        //            }
-        //            if (ImageFile.Length > 2097152)
-        //            {
-        //                throw new SizeOfFileException("ImageFile", "Please,You just can send low size file from 2 mb!");
-        //            }
-        //            string fileName = ImageFile.FileName;
-        //            if (fileName.Length > 64)
-        //            {
-        //                fileName = fileName.Substring(fileName.Length - 64, 64);
-        //            }
-        //            fileName = Guid.NewGuid().ToString() + fileName;
+        if (product.ImageFiles is not null)
+        {
+            foreach (var ImageFile in product.ImageFiles)
+            {
+                if (ImageFile.ContentType != "image/jpeg" && ImageFile.ContentType != "image/png")
+                {
+                    throw new InvalidContentTypeException("ImageFile", "Please,You enter jpeg or png file");
+                }
+                if (ImageFile.Length > 2097152)
+                {
+                    throw new SizeOfFileException("ImageFile", "Please,You just can send low size file from 2 mb!");
+                }
+                string fileName = ImageFile.FileName;
+                if (fileName.Length > 64)
+                {
+                    fileName = fileName.Substring(fileName.Length - 64, 64);
+                }
+                fileName = Guid.NewGuid().ToString() + fileName;
 
-        //            string path = Path.Combine(_env.WebRootPath, "uploads/Books", fileName);
+                string path = Path.Combine(_env.WebRootPath, "Uploads/Products", fileName);
 
-        //            using (FileStream fileStream = new FileStream(path, FileMode.Create))
-        //            {
-        //                ImageFile.CopyTo(fileStream);
-        //            }
+                using (FileStream fileStream = new FileStream(path, FileMode.Create))
+                {
+                    ImageFile.CopyTo(fileStream);
+                }
 
-        //            BookImage bookImage = new BookImage()
-        //            {
-        //                Book = book,
-        //                ImageUrl = fileName,
-        //                IsCover = null,
-        //                IsActivated = true,
-        //                CreatedDate = DateTime.UtcNow.AddHours(4),
-        //            };
+                ProductImage productImage = new ProductImage()
+                {
+                    Product = product,
+                    ImageUrl = fileName,
+                    IsCover = null,
+                    IsActivated = true,
+                    CreatedDate = DateTime.UtcNow.AddHours(4),
+                };
 
-        //            _context.BookImages.Add(bookImage);
-        //        }
+                _context.ProductImages.Add(productImage);
+            }
 
-        //    }
-        //    CurrentBook.Name = book.Name;
-        //    CurrentBook.UpdatedDate = DateTime.UtcNow.AddHours(4);
-        //    CurrentBook.Desc = book.Desc;
-        //    CurrentBook.CostPrice = book.CostPrice;
-        //    CurrentBook.SellPrice = book.SellPrice;
-        //    CurrentBook.Discount = book.Discount;
-        //    CurrentBook.AuthorId = book.AuthorId;
-        //    CurrentBook.IsFeatured = book.IsFeatured;
-        //    CurrentBook.MostView = book.MostView;
-        //    CurrentBook.BookImages = book.BookImages;
-        //    CurrentBook.GenreId = book.GenreId;
-        //    CurrentBook.IsNew = book.IsNew;
-        //    CurrentBook.IsActivated = book.IsActivated;
-        //    CurrentBook.StockCount = book.StockCount;
-        //    CurrentBook.ProductCode = book.ProductCode;
+        }
+        CurrentProduct.Name = product.Name;
+        CurrentProduct.UpdatedDate = DateTime.UtcNow.AddHours(4);
+        CurrentProduct.Desc = product.Desc;
+        CurrentProduct.CostPrice = product.CostPrice;
+        CurrentProduct.SalePrice = product.SalePrice;
+        CurrentProduct.DiscountPercent = product.DiscountPercent;
+        CurrentProduct.CategoryId = product.CategoryId;
+        CurrentProduct.IsFeatured = product.IsFeatured;
+        CurrentProduct.IsBestSeller = product.IsBestSeller;
+        CurrentProduct.ProductImages = product.ProductImages;   //
+        CurrentProduct.BrandId = product.BrandId;
+        CurrentProduct.IsNew = product.IsNew;
+        CurrentProduct.IsActivated = product.IsActivated;
+        CurrentProduct.StockCount = product.StockCount;
+        CurrentProduct.ProductCode = product.ProductCode;
 
-        //    await _context.SaveChangesAsync();
-        throw new NotImplementedException();
+        await _context.SaveChangesAsync();
     }
-    public Task DeleteAsync(int id)
+    public async Task DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        Product? deletedProduct = await _context.Products.FirstOrDefaultAsync(b => b.Id == id);
+        if (deletedProduct is null) throw new NotFoundException("Product is not found!");
+
+
+            ProductImage? coverImage = await _context.ProductImages.Where(bi => bi.IsCover == true).Where(bi => bi.ProductId == deletedProduct.Id).FirstOrDefaultAsync();
+
+            string url = coverImage.ImageUrl;
+
+            string path2 = Path.Combine(_env.WebRootPath, "Uploads/Products", coverImage.ImageUrl);
+            if (File.Exists(path2))
+            {   
+                File.Delete(path2);
+            }
+            _context.ProductImages.Remove(coverImage);
+
+        
+ 
+            ProductImage? hoverImage = await _context.ProductImages.Where(bi => bi.IsCover == false).Where(bi => bi.ProductId == deletedProduct.Id).FirstOrDefaultAsync();
+
+
+            string path3 = Path.Combine(_env.WebRootPath, "Uploads/Products", hoverImage.ImageUrl);
+            if (File.Exists(path3))
+            {
+                File.Delete(path3);
+            }
+            _context.ProductImages.Remove(hoverImage);
+
+        
+   
+            List<ProductImage> bookImage1 = await _context.ProductImages.Where(bi => bi.IsCover == null).Where(bi => bi.ProductId == deletedProduct.Id).ToListAsync();
+            foreach (var bookImage in bookImage1)
+            {
+                string path4 = Path.Combine(_env.WebRootPath, "Uploads/Products", bookImage.ImageUrl);
+                if (File.Exists(path4))
+                {
+                    File.Delete(path4);
+                }
+                _context.ProductImages.Remove(bookImage);
+            }
+        
+        _context.Products.Remove(deletedProduct);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<List<Product>> GetAllAsync(Expression<Func<Product, bool>>? expression = null, params string[] includes)
     {
         var query = _context.Products.AsQueryable();
         query= _GetIncludes(query, includes);
-        return expression is not null
-            ? await query.Where(expression).ToListAsync()
-            : await query.ToListAsync();
+        if (expression != null)
+        {
+            return await query.Where(expression).ToListAsync();
+        }
+        else
+        {
+            return await query.ToListAsync();
+        }
     }
 
     public async Task<Product> GetByIdAsync(int id)
@@ -338,7 +383,7 @@ public class ProductService : IProductService
     {
         var query = _context.Products.AsQueryable();
         query=_GetIncludes(query, includes);
-        return expression is not null
+        return (expression is not null)
             ? await query.Where(expression).FirstOrDefaultAsync()
             : await query.FirstOrDefaultAsync();
     }
