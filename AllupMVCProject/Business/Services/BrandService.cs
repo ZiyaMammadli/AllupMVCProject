@@ -150,7 +150,7 @@ namespace AllupMVCProject.Business.Services
             return expression is not null
                 ? await query.Where(expression).FirstOrDefaultAsync()
                 : await query.FirstOrDefaultAsync();
-        }
+        }   
         private IQueryable<Brand> _GetIncludes(IQueryable<Brand> query, params string[] includes)
         {
             if (includes is not null)

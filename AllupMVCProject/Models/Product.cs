@@ -21,17 +21,21 @@ public class Product:BaseEntity
     [Required]
     public double SalePrice { get; set; }
     public int DiscountPercent { get; set; }
+    public int StockCount {  get; set; }
+    [Required]
+    [StringLength (50)]
+    public string ProductCode { get; set; }
     public bool IsNew { get; set; }
     public bool IsBestSeller { get; set; }
     public bool IsFeatured { get; set; }
     [NotMapped]
-    public IFormFile HoverImageFile { get; set; }
+    public IFormFile? HoverImageFile { get; set; }
     [NotMapped]
-    public IFormFile CoverImageFile { get; set; }
+    public IFormFile? CoverImageFile { get; set; }
     [NotMapped]
-    public IFormFile ImageFiles { get; set; }
-    public ICollection<ProductImage> ProductImages { get; set; }
-    public Category Category { get; set; }
-    public Brand Brand { get; set; }
+    public ICollection<IFormFile>? ImageFiles { get; set; }
+    public ICollection<ProductImage>? ProductImages { get; set; }
+    public Category? Category { get; set; }
+    public Brand? Brand { get; set; }
 
 }

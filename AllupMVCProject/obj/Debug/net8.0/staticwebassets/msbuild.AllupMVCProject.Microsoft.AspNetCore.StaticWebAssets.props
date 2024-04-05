@@ -4624,12 +4624,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Brands\5ab5fed6-c83f-4d29-9055-a9b2b4deaa29banner-9.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Brands\d40ac08e-e4f0-4ee1-876b-399970660ee4banner-5.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>AllupMVCProject</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AllupMVCProject</BasePath>
-      <RelativePath>Uploads/Brands/5ab5fed6-c83f-4d29-9055-a9b2b4deaa29banner-9.jpg</RelativePath>
+      <RelativePath>Uploads/Brands/d40ac08e-e4f0-4ee1-876b-399970660ee4banner-5.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4638,23 +4638,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Brands\5ab5fed6-c83f-4d29-9055-a9b2b4deaa29banner-9.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Brands\b5353e48-758c-4025-b2d4-9ccfe946a3c2banner-1.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>AllupMVCProject</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AllupMVCProject</BasePath>
-      <RelativePath>Uploads/Brands/b5353e48-758c-4025-b2d4-9ccfe946a3c2banner-1.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Brands\b5353e48-758c-4025-b2d4-9ccfe946a3c2banner-1.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Brands\d40ac08e-e4f0-4ee1-876b-399970660ee4banner-5.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Categories\825b482d-1086-4877-9aaa-8c05ecda85bccategory-8.jpg))">
       <SourceType>Package</SourceType>

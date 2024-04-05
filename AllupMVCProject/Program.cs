@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ISliderService,SliderService>();
 builder.Services.AddScoped<ICategoryService,CategoryService>();
 builder.Services.AddScoped<IBrandService,BrandService>();
+builder.Services.AddScoped<IProductService,ProductService>();
 builder.Services.AddDbContext<AllupDbContext>(opt =>
 {
 	opt.UseSqlServer("Server=WIN-PRIFU0D7GO7\\SQLEXPRESS;Database=AllupDb;Trusted_Connection=true;TrustServerCertificate=True");
