@@ -58,7 +58,45 @@ namespace AllupMVCProject.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(Banner banner)
+        {
+            if (!ModelState.IsValid) return View();
 
+            try
+            {
+                await _bannerService.UpdateAsync(banner);
+            }
+            catch (NotFoundException ex)
+            {
+
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
+            catch (InvalidContentTypeException ex)
+            {
+                ModelState.AddModelError(ex._PropertyName, ex.Message);
+                return View();
+            }
+            catch (SizeOfFileException ex)
+            {
+                ModelState.AddModelError(ex._PropertName, ex.Message);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
+
+            return RedirectToAction("index");
+        }
 
     }
 }

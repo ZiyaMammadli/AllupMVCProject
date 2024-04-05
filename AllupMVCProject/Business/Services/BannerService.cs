@@ -55,9 +55,52 @@ public class BannerService : IBannerService
         await _context.SaveChangesAsync();
     }
 
-    public Task UpdateAsync(Banner banner)
+    public async Task UpdateAsync(Banner banner)
     {
-        throw new NotImplementedException();
+        Banner? currentBanner = await _context.Banners.FirstOrDefaultAsync(b => b.Id == banner.Id);
+
+        if (currentBanner is null)
+        {
+            throw new NotFoundException("Banner is not found");
+        }
+        if (banner.ImageFile is not null)
+        {
+            if (banner.ImageFile.ContentType != "image/jpeg" && banner.ImageFile.ContentType != "image/png")
+            {
+                throw new InvalidContentTypeException("ImageFile", "Please,You enter jpeg or png file");
+            }
+            if (banner.ImageFile.Length > 2097152)
+            {
+                throw new SizeOfFileException("ImageFile", "Please,You just can send low size file from 2 mb!");
+            }
+            string FileName = banner.ImageFile.FileName;
+            if (FileName.Length > 64)
+            {
+                FileName = FileName.Substring(FileName.Length - 64, 64);
+            }
+
+            FileName = Guid.NewGuid().ToString() + FileName;
+
+            string path = Path.Combine(_env.WebRootPath, "Uploads/Banners", FileName);
+
+            using (FileStream filestream = new FileStream(path, FileMode.Create))
+            {
+                banner.ImageFile.CopyTo(filestream);
+            }
+
+            string Lastpath = Path.Combine(_env.WebRootPath, "Uploads/Banners", currentBanner.ImageUrl);
+
+            if (File.Exists(Lastpath))
+            {
+                File.Delete(Lastpath);
+            }
+            currentBanner.ImageUrl = FileName;
+        }
+
+        currentBanner.RedirectUrl = banner.RedirectUrl;
+        currentBanner.UpdatedDate = DateTime.UtcNow.AddHours(4);
+        currentBanner.IsActivated = banner.IsActivated;
+        await _context.SaveChangesAsync();
     }
     public Task DeleteAsync(int id)
     {
