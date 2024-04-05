@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AllupMVCProject.Models;
 
-public class Banner
+public class Banner:BaseEntity
 {
     [Required]
     [StringLength(200)]
