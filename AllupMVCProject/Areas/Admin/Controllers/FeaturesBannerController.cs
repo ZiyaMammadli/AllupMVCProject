@@ -7,17 +7,17 @@ using Microsoft.AspNetCore.Mvc;
 namespace AllupMVCProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class BannerController : Controller
+    public class FeaturesBannerController : Controller
     {
-        private readonly IBannerService _bannerService;
-        public BannerController(IBannerService bannerService)
+        private readonly IFeaturesBannerService _featuresBannerService;
+        public FeaturesBannerController(IFeaturesBannerService featuresBannerService)
         {
-            _bannerService = bannerService;
+            _featuresBannerService = featuresBannerService;
         }
         [HttpGet]
-        public async Task <IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
-            return View(await _bannerService.GetAllAsync());
+            return View(await _featuresBannerService.GetAllAsync());
         }
         [HttpGet]
         public IActionResult Create()
@@ -26,13 +26,18 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Banner banner)
+        public async Task<IActionResult> Create(FeaturesBanner featuresBanner)
         {
             if(!ModelState.IsValid) return View();
 
             try
             {
-                await _bannerService.CreateAsync(banner);
+                await _featuresBannerService.CreateAsync(featuresBanner);
+            }
+            catch (AlreadyExistException ex)
+            {
+                ModelState.AddModelError(ex._PropertyName, ex.Message);
+                return View();
             }
             catch (RequiredPropertyException ex)
             {
@@ -61,17 +66,17 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            return View();
+            return View(await _featuresBannerService.GetByIdAsync(id));
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(Banner banner)
+        public async Task<IActionResult> Update(FeaturesBanner featuresBanner)
         {
             if (!ModelState.IsValid) return View();
 
             try
             {
-                await _bannerService.UpdateAsync(banner);
+                await _featuresBannerService.UpdateAsync(featuresBanner);
             }
             catch (NotFoundException ex)
             {
@@ -102,7 +107,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         {
             try
             {
-                await _bannerService.DeleteAsync(id);
+                await _featuresBannerService.DeleteAsync(id);
             }
             catch (NotFoundException ex)
             {

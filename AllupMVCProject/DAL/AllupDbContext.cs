@@ -13,5 +13,6 @@ namespace AllupMVCProject.DAL
 		public DbSet<Category> Categories { get; set; }
 		public DbSet<Brand> Brands { get; set; }
 		public DbSet<Banner> Banners { get; set; }
+		public DbSet<FeaturesBanner> FeaturesBanners { get; set; }
     }
 }

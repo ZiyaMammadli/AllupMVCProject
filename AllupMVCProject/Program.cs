@@ -12,6 +12,7 @@ builder.Services.AddScoped<ICategoryService,CategoryService>();
 builder.Services.AddScoped<IBrandService,BrandService>();
 builder.Services.AddScoped<IProductService,ProductService>();
 builder.Services.AddScoped<IBannerService,BannerService>();
+builder.Services.AddScoped<IFeaturesBannerService, FeaturesBannerService>();
 builder.Services.AddDbContext<AllupDbContext>(opt =>
 {
 	opt.UseSqlServer("Server=WIN-PRIFU0D7GO7\\SQLEXPRESS;Database=AllupDBContext;Trusted_Connection=true;TrustServerCertificate=True");

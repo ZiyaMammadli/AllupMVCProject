@@ -102,9 +102,24 @@ public class BannerService : IBannerService
         currentBanner.IsActivated = banner.IsActivated;
         await _context.SaveChangesAsync();
     }
-    public Task DeleteAsync(int id)
+    public async Task DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        Banner? banner = await _context.Banners.FirstOrDefaultAsync(b => b.Id == id);
+
+        if (banner is null)
+        {
+            throw new NotFoundException("Banner is not found");
+        }
+
+        string path = Path.Combine(_env.WebRootPath, "Uploads/Banners", banner.ImageUrl);
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+
+        _context.Banners.Remove(banner);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<List<Banner>> GetAllAsync(Expression<Func<Banner, bool>>? expression = null, params string[] includes)
