@@ -1,9 +1,10 @@
 ﻿using AllupMVCProject.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AllupMVCProject.DAL
 {
-	public class AllupDbContext:DbContext
+	public class AllupDbContext:IdentityDbContext<AppUser>
 	{
         public AllupDbContext(DbContextOptions <AllupDbContext> option) : base(option) { }
 
@@ -15,5 +16,6 @@ namespace AllupMVCProject.DAL
 		public DbSet<Banner> Banners { get; set; }
 		public DbSet<FeaturesBanner> FeaturesBanners { get; set; }
 		public DbSet<Blog> Blogs { get; set; }
+		public DbSet<AppUser> Users { get; set; }
     }
 }
