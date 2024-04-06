@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\viewmodels\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\viewmodels\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\dal\\allupdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,63 +38,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "AllupMVCProject\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "AllupMVCProject\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T12:00:46.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "AllupMVCProject\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "AllupMVCProject\\Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAjAAAA",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "AllupMVCProject\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-06T12:00:42.696Z",
+              "WhenOpened": "2024-04-06T14:03:53.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "AllupMVCProject\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "AllupMVCProject\\Views\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAALAAAA",
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Views\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "AllupMVCProject\\Views\\Account\\ResetPassword.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-06T12:00:16.848Z",
+              "WhenOpened": "2024-04-06T13:57:20.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "ResetPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\ViewModels\\ResetPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "AllupMVCProject\\ViewModels\\ResetPasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\ViewModels\\ResetPasswordViewModel.cs",
+              "RelativeToolTip": "AllupMVCProject\\ViewModels\\ResetPasswordViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T13:56:10.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "AllupMVCProject\\Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-06T13:46:57.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "AllupMVCProject\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Controllers\\AccountController.cs",
               "RelativeToolTip": "AllupMVCProject\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBsAAAAtAAAA",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAkwIUAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T11:51:30.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AllupDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\DAL\\AllupDbContext.cs",
               "RelativeDocumentMoniker": "AllupMVCProject\\DAL\\AllupDbContext.cs",
@@ -103,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Program.cs",
               "RelativeDocumentMoniker": "AllupMVCProject\\Program.cs",

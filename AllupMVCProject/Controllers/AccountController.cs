@@ -22,6 +22,11 @@ namespace AllupMVCProject.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -48,7 +53,7 @@ namespace AllupMVCProject.Controllers
             }
             AppUser member = new AppUser()
             {
-                FullName = RegisterVM.UserName,
+                FullName = RegisterVM.FullName,
                 UserName = RegisterVM.UserName,
                 Email = RegisterVM.Email,
                 PhoneNumber = RegisterVM.PhoneNumber,
@@ -77,6 +82,113 @@ namespace AllupMVCProject.Controllers
                 }
             }
             return RedirectToAction("Login");
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(MemberLoginViewModel MemberLoginVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            AppUser? member = null;
+
+            member = await _userManager.FindByNameAsync(MemberLoginVM.UserName);
+
+            if (member is null)
+            {
+                ModelState.AddModelError("", "Incorrect password or username!");
+                return View();
+            }
+            var result = await _signInManager.PasswordSignInAsync(member, MemberLoginVM.Password, false, false);
+
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Incorrect password or username!");
+                return View();
+            }
+
+            return RedirectToAction("index", "home");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("login");
+        }
+        [HttpGet]
+        public async Task<IActionResult> ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel ForgotPasswordVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            var user = await _userManager.FindByEmailAsync(ForgotPasswordVM.Email);
+
+            if (user is not null)
+            {
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var resetTokenLink = Url.Action("ResetPassword", "Account", new { email = ForgotPasswordVM.Email, token = token }, Request.Scheme);
+
+                //email services...
+
+                return View("confirmPage");
+            }
+            else
+            {
+                ModelState.AddModelError("Email", "Email Not Found");
+                return View();
+            }
+
+        }
+        [HttpGet]
+        public IActionResult ResetPassword(string email, string token)
+        {
+            if (email is null || token is null)
+            {
+                return NotFound();
+            }
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel resetPasswordVM)
+        {
+            if (!ModelState.IsValid) return View();
+
+            var user = await _userManager.FindByEmailAsync(resetPasswordVM.Email);
+            if (user is not null)
+            {
+                var result = await _userManager.ResetPasswordAsync(user, resetPasswordVM.Token, resetPasswordVM.NewPassword);
+                if (!result.Succeeded)
+                {
+                    foreach (var err in result.Errors)
+                    {
+                        ModelState.AddModelError("", err.Description);
+                        return View();
+                    }
+                }
+            }
+            else
+            {
+                return NotFound("Email not found");
+            }
+            return RedirectToAction("Login", "Account");
+
         }
     }
 }
