@@ -1,12 +1,14 @@
 ﻿using AllupMVCProject.Business.Interfaces;
 using AllupMVCProject.Models;
 using AllupMVCProject.Utilities.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.CodeAnalysis;
 
 namespace AllupMVCProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;
@@ -25,6 +27,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> CreateAsync(Slider slider)
         {
             if (!ModelState.IsValid) return View();
@@ -61,6 +64,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Update(Slider slider)
         {
             if (!ModelState.IsValid) return View();
@@ -92,6 +96,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
             return RedirectToAction("index");
         }
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task <IActionResult> Delete(int id)
         {
             try

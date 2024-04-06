@@ -2,11 +2,13 @@
 using AllupMVCProject.Business.Services;
 using AllupMVCProject.Models;
 using AllupMVCProject.Utilities.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AllupMVCProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;
@@ -25,6 +27,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task <IActionResult> Create(Category category)
         {
             if (!ModelState.IsValid) return View();
@@ -69,6 +72,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Update(Category category)
         {
             if (!ModelState.IsValid) return View();
@@ -100,6 +104,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task< IActionResult> Delete(int id)
         {
             try

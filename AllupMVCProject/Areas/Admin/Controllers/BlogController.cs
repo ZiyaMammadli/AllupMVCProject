@@ -2,12 +2,14 @@
 using AllupMVCProject.Business.Services;
 using AllupMVCProject.Models;
 using AllupMVCProject.Utilities.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 
 namespace AllupMVCProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class BlogController : Controller
     {
         private readonly IBlogService _blogService;
@@ -27,6 +29,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Create(Blog blog)
         {
             if (!ModelState.IsValid) return View();
@@ -66,6 +69,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Update(Blog blog)
         {
             if (!ModelState.IsValid) return View();
@@ -100,6 +104,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
             return RedirectToAction("index");
         }
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task< IActionResult> Delete(int id)
         {
             try

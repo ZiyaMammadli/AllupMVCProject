@@ -1,12 +1,14 @@
 ﻿using AllupMVCProject.DAL;
 using AllupMVCProject.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AllupMVCProject.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-	public class DashboardController : Controller
+    [Authorize(Roles = "Admin,SuperAdmin")]
+    public class DashboardController : Controller
 	{
         private readonly AllupDbContext _context;
         private readonly UserManager<AppUser> _userManager;

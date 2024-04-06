@@ -2,11 +2,13 @@
 using AllupMVCProject.Business.Services;
 using AllupMVCProject.Models;
 using AllupMVCProject.Utilities.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AllupMVCProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class FeaturesBannerController : Controller
     {
         private readonly IFeaturesBannerService _featuresBannerService;
@@ -26,6 +28,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Create(FeaturesBanner featuresBanner)
         {
             if(!ModelState.IsValid) return View();
@@ -70,6 +73,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Update(FeaturesBanner featuresBanner)
         {
             if (!ModelState.IsValid) return View();
@@ -103,6 +107,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
             return RedirectToAction("index");
         }
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             try

@@ -1,11 +1,13 @@
 ﻿using AllupMVCProject.Business.Interfaces;
 using AllupMVCProject.Models;
 using AllupMVCProject.Utilities.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AllupMVCProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
@@ -30,6 +32,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Create(Product product) 
         {
             ViewData["category"] = await _categoryService.GetAllAsync();
@@ -83,6 +86,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Update(Product product)
         {
             ViewData["category"] = await _categoryService.GetAllAsync();
@@ -123,6 +127,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
 
         }
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task <IActionResult> Delete(int id)
         {
             try

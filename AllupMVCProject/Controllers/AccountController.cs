@@ -145,6 +145,7 @@ namespace AllupMVCProject.Controllers
                 var resetTokenLink = Url.Action("ResetPassword", "Account", new { email = ForgotPasswordVM.Email, token = token }, Request.Scheme);
 
                 //email services...
+                //var result = await _userManager.ConfirmEmailAsync(user, token);
 
                 return View("confirmPage");
             }

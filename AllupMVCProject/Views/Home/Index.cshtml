@@ -1,43 +1,38 @@
-﻿ <!--====== Slider Part Start ======-->
+﻿@model HomeViewModel
+ <!--====== Slider Part Start ======-->
 
 <section class="slider-area slider-3">
     <div class="container-fluid custom-container">
         <div class="row">
             <div class="col-lg-8">
                 <div class="slider-active mt-30">
-                    <div class="single-slider">
-                        <div class="slider-image">
-                            <img src="~/assets/images/slider-5.jpg" alt="slider">
-                        </div>
-                        <div class="slider-content-wrapper">
-                            <div class="slider-content">
-                                <h1 data-animation="bounceInDown" data-delay="0.2s" class="main-title "><span>2020 Virtual Reality </span> Fulldive VR.</h1>
-                                <p data-animation="bounceInDown" data-delay="0.5s">Explore and immerse in exciting 360 content with <br> Fulldive’s all-in-one virtual reality platform</p>
-                                <a data-animation="zoomIn" data-delay="0.8s" class="main-btn " href="shop-4-column.html">Shop Now</a>
+                    @foreach (var slider in Model.sliders)
+                    {
+                        <div class="single-slider">
+                            <div class="slider-image">
+                                <img src="~/Uploads/Sliders/@slider.ImageUrl" alt="slider">
                             </div>
-                        </div>
-                    </div> <!-- single slider -->
-                    <div class="single-slider">
-                        <div class="slider-image">
-                            <img src="~/assets/images/slider-6.jpg" alt="slider">
-                        </div>
-                        <div class="slider-content-wrapper">
-                            <div class="slider-content">
-                                <h1 data-animation="bounceInDown" data-delay="0.2s" class="main-title "><span>4K HDR Smart TV 43 </span> Sony Bravia.</h1>
-                                <p data-animation="bounceInDown" data-delay="0.5s">Explore and immerse in exciting 360 content with <br> Fulldive’s all-in-one virtual reality platform</p>
-                                <a data-animation="zoomIn" data-delay="0.8s" class="main-btn " href="shop-4-column.html">Shop Now</a>
+                            <div class="slider-content-wrapper">
+                                <div class="slider-content">
+                                    <h1 data-animation="bounceInDown" style="color:navajowhite" data-delay="0.2s" class="main-title ">@slider.Title</h1>
+                                    <p data-animation="bounceInDown" style="color: lightgoldenrodyellow" data-delay="0.5s">@slider.Desc</p>
+                                    <a data-animation="zoomIn" data-delay="0.8s" class="main-btn " href="shop-4-column.html">Shop Now</a>
+                                </div>
                             </div>
-                        </div>
-                    </div> <!-- single slider -->
+                        </div> <!-- single slider -->
+                    }
+                   
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="slider-banner mt-30">
-                    <a href="shop-4-column.html"><img src="~/assets/images/banner-8.jpg" alt="banner"></a>
-                </div> <!-- slider banner -->
-                <div class="slider-banner mt-30">
-                    <a href="shop-4-column.html"><img src="~/assets/images/banner-9.jpg" alt="banner"></a>
-                </div> <!-- slider banner -->
+                @foreach (var banner in Model.banners)
+                {
+                    <div class="slider-banner mt-30">
+                        <a href="shop-4-column.html"><img src="~/Uploads/Banners/@banner.ImageUrl" alt="banner"></a>
+                    </div> <!-- slider banner -->
+                }
+              
+
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
@@ -50,51 +45,18 @@
 <div class="features-banner-area pt-95">
     <div class="container-fluid custom-container">
         <div class="features-banner-wrapper d-flex flex-wrap">
-            <div class="single-features-banner d-flex">
-                <div class="banner-icon">
-                    <img src="~/assets/images/banner-icon/icon1.png" alt="Icon">
-                </div>
-                <div class="banner-content media-body">
-                    <h3 class="banner-title">Free Shipping</h3>
-                    <p>Free shipping on all US order</p>
-                </div>
-            </div> <!-- single features banner -->
-            <div class="single-features-banner d-flex">
-                <div class="banner-icon">
-                    <img src="~/assets/images/banner-icon/icon2.png" alt="Icon">
-                </div>
-                <div class="banner-content media-body">
-                    <h3 class="banner-title">Support 24/7</h3>
-                    <p>Contact us 24 hours a day</p>
-                </div>
-            </div> <!-- single features banner -->
-            <div class="single-features-banner d-flex">
-                <div class="banner-icon">
-                    <img src="~/assets/images/banner-icon/icon3.png" alt="Icon">
-                </div>
-                <div class="banner-content media-body">
-                    <h3 class="banner-title">100% Money Back</h3>
-                    <p>You have 30 days to Return</p>
-                </div>
-            </div> <!-- single features banner -->
-            <div class="single-features-banner d-flex">
-                <div class="banner-icon">
-                    <img src="~/assets/images/banner-icon/icon4.png" alt="Icon">
-                </div>
-                <div class="banner-content media-body">
-                    <h3 class="banner-title">90 Days Return</h3>
-                    <p>If goods have problems</p>
-                </div>
-            </div> <!-- single features banner -->
-            <div class="single-features-banner d-flex">
-                <div class="banner-icon">
-                    <img src="~/assets/images/banner-icon/icon5.png" alt="Icon">
-                </div>
-                <div class="banner-content media-body">
-                    <h3 class="banner-title">Payment Secure</h3>
-                    <p>We ensure secure payment</p>
-                </div>
-            </div> <!-- single features banner -->
+            @foreach (var featuresBanner in Model.featuresBanners)
+            {
+                <div class="single-features-banner d-flex">
+                    <div class="banner-icon">
+                        <img style="width:49px;height:49px;" src="~/Uploads/FeaturesBanners/@featuresBanner.ImageUrl" alt="Icon">
+                    </div>
+                    <div class="banner-content media-body">
+                        <h3 class="banner-title">@featuresBanner.Title</h3>
+                        <p>@featuresBanner.Desc</p>
+                    </div>
+                </div> <!-- single features banner -->
+            }
         </div> <!-- features banner wrapper -->
     </div> <!-- container -->
 </div>
@@ -1344,16 +1306,15 @@
 <div class="banner-area pt-70">
     <div class="container-fluid custom-container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="banner-image banner-2">
-                    <a href="shop-4-column.html"><img src="~/assets/images/banner-6.jpg" alt="banner"></a>
-                </div> <!-- banner image -->
-            </div>
-            <div class="col-md-6">
-                <div class="banner-image banner-2">
-                    <a href="shop-4-column.html"><img src="~/assets/images/banner-7.jpg" alt="banner"></a>
-                </div> <!-- banner image -->
-            </div>
+            @foreach (var banner in Model.banners)
+            {
+                <div class="col-md-6">
+                    <div class="banner-image banner-2">
+                        <a href="shop-4-column.html"><img src="~/uploads/Banners/@banner.ImageUrl" alt="banner"></a>
+                    </div> <!-- banner image -->
+                </div>
+            }
+   
         </div> <!-- row -->
     </div> <!-- container -->
 </div>
@@ -2209,66 +2170,25 @@
             </div>
         </div> <!-- row -->
         <div class="row blog-active">
-            <div class="col-lg-4">
-                <div class="single-blog">
-                    <div class="blag-image">
-                        <a href="blog-single-left-sidebar.html"><img src="~/assets/images/blog-1.jpg" alt="Blog"></a>
-                        <p class="meta-date">
-                            <span class="day">05</span>
-                            <span class="month">Dec</span>
-                        </p>
-                    </div>
-                    <div class="blag-content">
-                        <h2 class="blog-title"><a href="blog-single-left-sidebar.html">This is Third Post For XipBlog</a></h2>
-                        <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum ...</p>
-                    </div>
-                </div> <!-- single blog -->
-            </div>
-            <div class="col-lg-4">
-                <div class="single-blog">
-                    <div class="blag-image">
-                        <a href="blog-single-left-sidebar.html"><img src="~/assets/images/blog-2.jpg" alt="Blog"></a>
-                        <p class="meta-date">
-                            <span class="day">05</span>
-                            <span class="month">Dec</span>
-                        </p>
-                    </div>
-                    <div class="blag-content">
-                        <h2 class="blog-title"><a href="blog-single-left-sidebar.html">This is Third Post For XipBlog</a></h2>
-                        <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum ...</p>
-                    </div>
-                </div> <!-- single blog -->
-            </div>
-            <div class="col-lg-4">
-                <div class="single-blog">
-                    <div class="blag-image">
-                        <a href="blog-single-left-sidebar.html"><img src="~/assets/images/blog-3.jpg" alt="Blog"></a>
-                        <p class="meta-date">
-                            <span class="day">05</span>
-                            <span class="month">Dec</span>
-                        </p>
-                    </div>
-                    <div class="blag-content">
-                        <h2 class="blog-title"><a href="blog-single-left-sidebar.html">This is Third Post For XipBlog</a></h2>
-                        <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum ...</p>
-                    </div>
-                </div> <!-- single blog -->
-            </div>
-            <div class="col-lg-4">
-                <div class="single-blog">
-                    <div class="blag-image">
-                        <a href="blog-single-left-sidebar.html"><img src="~/assets/images/blog-4.jpg" alt="Blog"></a>
-                        <p class="meta-date">
-                            <span class="day">05</span>
-                            <span class="month">Dec</span>
-                        </p>
-                    </div>
-                    <div class="blag-content">
-                        <h2 class="blog-title"><a href="blog-single-left-sidebar.html">This is Third Post For XipBlog</a></h2>
-                        <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum ...</p>
-                    </div>
-                </div> <!-- single blog -->
-            </div>
+            @foreach (var blog in Model.blogs)
+            {
+                <div class="col-lg-4">
+                    <div class="single-blog">
+                        <div class="blag-image">
+                            <a href="blog-single-left-sidebar.html"><img style="width:350px;height:232px" src="~/Uploads/Blogs/@blog.ImageUrl" alt="Blog"></a>
+                            <p class="meta-date">
+                                <span class="day">@blog.CreatedDate.Day</span>
+                                <span class="month">@blog.CreatedDate.ToString("MMM")</span>
+                            </p>
+                        </div>
+                        <div class="blag-content">
+                            <h2 class="blog-title"><a href="blog-single-left-sidebar.html">@blog.Title</a></h2>
+                            <p>@blog.Desc</p>
+                        </div>
+                    </div> <!-- single blog -->
+                </div>
+            }
+          
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
