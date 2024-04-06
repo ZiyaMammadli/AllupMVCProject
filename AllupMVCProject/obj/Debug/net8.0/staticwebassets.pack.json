@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AllupMVCProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Blogs\\1b40fa7e-77db-4fc5-a3d0-830240ca02e0banner-4.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Blogs\\1b40fa7e-77db-4fc5-a3d0-830240ca02e0banner-4.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Brands\\ace57a00-d656-48bd-8e16-8351a0e4d569banner-12.jpg",
       "PackagePath": "staticwebassets\\Uploads\\Brands\\ace57a00-d656-48bd-8e16-8351a0e4d569banner-12.jpg"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "53/bqDOoFmgo4QFYkzppmdex0g+DROvsYF8mDsb6WY8=",
+  "Hash": "QNquL00Jd4X5dMZm3+BMW0UC1IDTvfGhEUBi/Db4NEU=",
   "Source": "AllupMVCProject",
   "BasePath": "_content/AllupMVCProject",
   "Mode": "Default",
@@ -5544,6 +5544,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Blogs\\1b40fa7e-77db-4fc5-a3d0-830240ca02e0banner-4.jpg",
+      "SourceId": "AllupMVCProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\",
+      "BasePath": "_content/AllupMVCProject",
+      "RelativePath": "Uploads/Blogs/1b40fa7e-77db-4fc5-a3d0-830240ca02e0banner-4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Blogs\\1b40fa7e-77db-4fc5-a3d0-830240ca02e0banner-4.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\Uploads\\Brands\\ace57a00-d656-48bd-8e16-8351a0e4d569banner-12.jpg",
