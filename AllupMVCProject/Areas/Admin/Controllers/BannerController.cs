@@ -61,7 +61,7 @@ namespace AllupMVCProject.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            return View();
+            return View(await _bannerService.GetByIdAsync(id));
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

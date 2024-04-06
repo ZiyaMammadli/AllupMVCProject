@@ -1,0 +1,48 @@
+﻿@model List<Blog>;
+@{
+    int counter = 0;
+}
+<div class="container">
+    <div class="row">
+        <div style="display:flex;justify-content:space-between;align-items:center;align-content:center;margin-top:20px;border:1px solid grey;padding:10px">
+            <h3 style="margin-bottom:0">Blogs</h3>
+            <a class="btn-success" style="padding:10px;align-items:center;border-radius:10px" asp-controller="blog" asp-action="create">Create</a>
+        </div>
+        <table class="table table-striped" style="margin-top:40px;border:1px solid grey">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">RedirectUrl</th>
+                    <th scope="col">Activate</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var blog in Model)
+                {
+                    counter++;
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@blog.Title</td>
+                        <td>@blog.Desc</td>
+                        <td>@blog.RedirectUrl</td>
+                        <td>@blog.IsActivated</td>
+                        <td>
+                            <img style="width:150px" src="~/Uploads/Blogs/@blog.ImageUrl" alt="Alternate Text" />
+                        </td>
+                        <td>
+                            <div style="display:flex;">
+                                <a style="margin-right:10px;color:white" class="btn btn-warning" asp-controller="blog" asp-action="update" asp-route-id="@blog.Id">Update</a>
+                                <a style="color:white" class="btn btn-danger deleteButton" asp-controller="blog" asp-action="delete" asp-route-id="@blog.Id">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

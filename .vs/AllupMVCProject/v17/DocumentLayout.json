@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\dal\\allupdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\dal\\allupdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\business\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\business\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\business\\services\\bannerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\business\\services\\bannerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\areas\\admin\\controllers\\bannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\areas\\admin\\controllers\\bannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\areas\\admin\\views\\blog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\areas\\admin\\views\\blog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\dal\\allupdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\dal\\allupdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +42,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BannerController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "RelativeToolTip": "AllupMVCProject\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAswHQAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T07:07:23.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "RelativeToolTip": "AllupMVCProject\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-06T06:58:21.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BannerService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Business\\Services\\BannerService.cs",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Business\\Services\\BannerService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Business\\Services\\BannerService.cs",
+              "RelativeToolTip": "AllupMVCProject\\Business\\Services\\BannerService.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAgwHkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T06:38:16.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BlogService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Business\\Services\\BlogService.cs",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Business\\Services\\BlogService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Business\\Services\\BlogService.cs",
+              "RelativeToolTip": "AllupMVCProject\\Business\\Services\\BlogService.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAswHcAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T06:31:58.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "BlogController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Areas\\Admin\\Controllers\\BlogController.cs",
               "RelativeDocumentMoniker": "AllupMVCProject\\Areas\\Admin\\Controllers\\BlogController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Areas\\Admin\\Controllers\\BlogController.cs",
               "RelativeToolTip": "AllupMVCProject\\Areas\\Admin\\Controllers\\BlogController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAowGUAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T06:19:04.806Z",
               "EditorCaption": ""
@@ -49,14 +117,14 @@
               "RelativeDocumentMoniker": "AllupMVCProject\\Models\\Blog.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Models\\Blog.cs",
               "RelativeToolTip": "AllupMVCProject\\Models\\Blog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T06:04:11.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "AllupDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\DAL\\AllupDbContext.cs",
               "RelativeDocumentMoniker": "AllupMVCProject\\DAL\\AllupDbContext.cs",
@@ -69,13 +137,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Program.cs",
               "RelativeDocumentMoniker": "AllupMVCProject\\Program.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Program.cs",
               "RelativeToolTip": "AllupMVCProject\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T19:23:03.749Z",
               "EditorCaption": ""
