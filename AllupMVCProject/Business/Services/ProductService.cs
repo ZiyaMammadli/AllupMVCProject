@@ -103,11 +103,11 @@ public class ProductService : IProductService
             {
                 if (ImageFile.ContentType != "image/jpeg" && ImageFile.ContentType != "image/png")
                 {
-                    throw new InvalidContentTypeException("ImageFile", "Please,You enter jpeg or png file");
+                    throw new InvalidContentTypeException("ImageFiles", "Please,You enter jpeg or png file");
                 }
                 if (ImageFile.Length > 2097152)
                 {
-                    throw new SizeOfFileException("ImageFile", "Please,You just can send low size file from 2 mb!");
+                    throw new SizeOfFileException("ImageFiles", "Please,You just can send low size file from 2 mb!");
                 }
                 string fileName = ImageFile.FileName;
                 if (fileName.Length > 64)
@@ -262,11 +262,11 @@ public class ProductService : IProductService
             {
                 if (ImageFile.ContentType != "image/jpeg" && ImageFile.ContentType != "image/png")
                 {
-                    throw new InvalidContentTypeException("ImageFile", "Please,You enter jpeg or png file");
+                    throw new InvalidContentTypeException("ImageFiles", "Please,You enter jpeg or png file");
                 }
                 if (ImageFile.Length > 2097152)
                 {
-                    throw new SizeOfFileException("ImageFile", "Please,You just can send low size file from 2 mb!");
+                    throw new SizeOfFileException("ImageFiles", "Please,You just can send low size file from 2 mb!");
                 }
                 string fileName = ImageFile.FileName;
                 if (fileName.Length > 64)

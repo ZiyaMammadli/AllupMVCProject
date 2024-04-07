@@ -3,6 +3,7 @@ using AllupMVCProject.DAL;
 using AllupMVCProject.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace AllupMVCProject.Controllers
@@ -23,6 +24,9 @@ namespace AllupMVCProject.Controllers
                 featuresBanners=_context.FeaturesBanners.ToList(),
                 brands=_context.Brands.ToList(),
                 blogs=_context.Blogs.ToList(),
+                products=_context.Products.Include(p=>p.ProductImages).Include(p=>p.Category).Include(p=>p.Brand).ToList(),
+                categories=_context.Categories.ToList(),
+                productsImages=_context.ProductImages.ToList(),
             };
 			return View(homeVM);
 		}
