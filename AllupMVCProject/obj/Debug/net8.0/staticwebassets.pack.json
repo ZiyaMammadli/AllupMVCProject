@@ -1089,6 +1089,14 @@
       "PackagePath": "staticwebassets\\assets\\js\\plugins\\slick.min.js"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\assets\\js\\vendor\\DeleteJs.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\DeleteJs.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\assets\\js\\vendor\\addToBasket.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\addToBasket.js"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\wwwroot\\assets\\js\\vendor\\jquery-1.12.4.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\vendor\\jquery-1.12.4.min.js"
     },

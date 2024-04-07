@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\views\\shop\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\views\\shop\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\dal\\allupdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\dal\\allupdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|c:\\users\\user\\source\\repos\\allupmvcproject\\allupmvcproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{777A9037-AE4C-4909-8105-3625AA014503}|AllupMVCProject\\AllupMVCProject.csproj|solutionrelative:allupmvcproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +35,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CheckOut.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Shop\\CheckOut.cshtml",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Views\\Shop\\CheckOut.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Shop\\CheckOut.cshtml",
+              "RelativeToolTip": "AllupMVCProject\\Views\\Shop\\CheckOut.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T22:32:54.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AllupMVCProject\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAGcAAACfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T19:41:34.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AllupDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\DAL\\AllupDbContext.cs",
+              "RelativeDocumentMoniker": "AllupMVCProject\\DAL\\AllupDbContext.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\DAL\\AllupDbContext.cs",
+              "RelativeToolTip": "AllupMVCProject\\DAL\\AllupDbContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T19:19:46.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "AllupMVCProject\\Controllers\\ShopController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "AllupMVCProject\\Controllers\\ShopController.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAIwKgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T19:12:38.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Program.cs",
               "RelativeDocumentMoniker": "AllupMVCProject\\Program.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\AllupMVCProject\\AllupMVCProject\\Program.cs",
               "RelativeToolTip": "AllupMVCProject\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAAA5AAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACwAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T19:23:03.749Z",
               "EditorCaption": ""

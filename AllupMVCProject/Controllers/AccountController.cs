@@ -116,12 +116,11 @@ namespace AllupMVCProject.Controllers
 
             return RedirectToAction("index", "home");
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("login");
+            return RedirectToAction("index","home");
         }
         [HttpGet]
         public async Task<IActionResult> ForgotPassword()
