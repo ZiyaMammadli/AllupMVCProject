@@ -8,11 +8,11 @@ addToBasketBtns.forEach(btn => btn.addEventListener("click", function (e) {
 
     fetch(url).then(response => {
         if (response.status == 200) {
-            alert("elave olundu")
+            alert("Added Basket")
 
         }
         else {
-            alert("tapilmadi")
+            alert("Product not found!")
         }
     })
 }))

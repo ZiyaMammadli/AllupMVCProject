@@ -1,4 +1,5 @@
-﻿using AllupMVCProject.DAL;
+﻿using AllupMVCProject.Business.Interfaces;
+using AllupMVCProject.DAL;
 using AllupMVCProject.Models;
 using AllupMVCProject.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -13,10 +14,12 @@ namespace AllupMVCProject.Controllers
     {
         private readonly AllupDbContext _context;
         private readonly UserManager<AppUser> _userManager;
-        public ShopController(AllupDbContext Context,UserManager<AppUser> userManager)
+        private readonly IProductService _productService;
+        public ShopController(AllupDbContext Context,UserManager<AppUser> userManager,IProductService productService)
         {
             _context = Context;
             _userManager = userManager;
+            _productService = productService;
         }
         public IActionResult Index()
         {
@@ -227,6 +230,16 @@ namespace AllupMVCProject.Controllers
             ViewData["TotalPrice"] = TotalPrice;
 
             return View(checkOutVMs);
+        }
+        [HttpGet]
+        public async Task< IActionResult> Detail(int ProductId)
+        {
+            var product=await _productService.GetSingleAsync(p=>p.Id==ProductId,"Category","Brand","ProductImages");
+            var products=await _productService.GetAllAsync(null,"Category","Brand","ProductImages");
+
+            ViewData["products"] = products;
+
+            return View(product);
         }
     }
 }
